@@ -1,0 +1,41 @@
+import public "core.proto"
+
+syntax = "proto3";
+
+package mdp;
+
+message ReportExportPieceAddress {
+  optional string addition=1;
+  optional string city=2;
+  optional string countryCode=3;
+  optional string houseNumber=4;
+  optional string postalCode=5;
+  optional string street=6;
+  optional repeated string lines=7
+}
+
+message ReportExportPieceParty {
+  optional AccountNumber accountId=1;
+  optional ReportExportPieceAddress address=2;
+  optional string contactName=3;
+  optional string email=4;
+  optional string fax=5;
+  optional string name=6;
+  optional string telephone=7;
+}
+
+message ReportExportPieceDeliveryLocation {
+  LocationType type=1;
+  optional string name=2;
+  optional ReportingPieceAddress address=3;
+}
+
+message ReportExportPieceEvent {
+  optional string category=1;
+  optional string causedBy=2;
+  optional string deliveryCode=3;
+  optional string facility=4;
+  optional string localTimestamp=5;
+  optional string status=6;
+  optional string timestamp=7;
+}

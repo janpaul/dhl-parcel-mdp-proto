@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package mdp;
+
+message AccountNumber {
+  string value=1;
+}
+message LocationType {
+  string value=1;
+}
